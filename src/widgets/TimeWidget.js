@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Draggable from "react-draggable";
 
 export default function TimeWidget() {
   const parseTime = () => {
@@ -24,13 +25,15 @@ export default function TimeWidget() {
   const time = parseTime();
 
   return (
-    <div id="TimeWidget" className="widgets">
-      <i className="bi-clock"></i>
-      <p className="centerText">
-        {today}
-        <br></br>
-        <small>{time}</small>
-      </p>
-    </div>
+    <Draggable>
+      <div id="TimeWidget" className="widgets">
+        <i className="bi-clock"></i>
+        <p className="centerText">
+          {today}
+          <br></br>
+          <small>{time}</small>
+        </p>
+      </div>
+    </Draggable>
   );
 }

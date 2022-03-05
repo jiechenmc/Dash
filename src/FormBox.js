@@ -3,7 +3,7 @@ import FormBoxTop from "./FormBoxTop";
 import FormBoxBot from "./FormBoxBot";
 export default function FormBox() {
   return (
-    <div id="FormBoxContainer" class="centerElement">
+    <div id="FormBoxContainer" className="centerElement">
       <FormBoxTop></FormBoxTop>
       <FormBoxBot></FormBoxBot>
     </div>

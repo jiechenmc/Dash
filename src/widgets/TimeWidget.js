@@ -24,9 +24,9 @@ export default function TimeWidget() {
   const time = parseTime();
 
   return (
-    <div id="TimeWidget" class="widgets">
-      <i class="bi-clock"></i>
-      <p class="centerText">
+    <div id="TimeWidget" className="widgets">
+      <i className="bi-clock"></i>
+      <p className="centerText">
         {today}
         <br></br>
         <small>{time}</small>

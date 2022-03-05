@@ -2,9 +2,9 @@ import React from "react";
 
 export default function WeatherWidget() {
   return (
-    <div id="WeatherWidget" class="widgets">
-      <i class="bi-cloud"></i>
-      <p class="centerText">Weather</p>
+    <div id="WeatherWidget" className="widgets">
+      <i className="bi-cloud"></i>
+      <p className="centerText">Weather</p>
     </div>
   );
 }

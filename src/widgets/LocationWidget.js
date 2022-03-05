@@ -2,9 +2,9 @@ import React from "react";
 
 export default function LocationWidget() {
   return (
-    <div id="LocationWidget" class="widgets">
-      <i class="bi-pin-map"></i>
-      <p class="centerText">Location</p>
+    <div id="LocationWidget" className="widgets">
+      <i className="bi-pin-map"></i>
+      <p className="centerText">Location</p>
     </div>
   );
 }

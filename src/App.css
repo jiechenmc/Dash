@@ -1,33 +1,17 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-#FormBoxContainer,
-#FormBoxTop,
-#FormBoxBot,
+#TaskBar,
 .widgets {
   display: flex;
 }
 
-#FormBoxContainer {
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-  /* border: 1px solid grey; */
-}
-
-#FormBoxTop {
-  gap: 30px;
-}
-
-#FormBoxBot {
-  gap: 15px;
-}
-
-.centerElement {
-  position: fixed;
-  top: 50%;
+#TaskBar {
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  transform: translate(-50%);
+  gap: 10px;
+  border: 1px solid red;
 }
 
 .widgets {

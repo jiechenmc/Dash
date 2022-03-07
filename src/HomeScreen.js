@@ -1,6 +1,6 @@
 import React from "react";
-import FormBox from "./FormBox";
+import Taskbar from "./TaskBar";
 
 export default function HomeScreen() {
-  return <FormBox></FormBox>;
+  return <Taskbar></Taskbar>;
 }

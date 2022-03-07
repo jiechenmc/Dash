@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
+import "./TimeWidget.css";
 
 export default function TimeWidgetModal() {
   const parseTime = () => {
@@ -36,29 +37,29 @@ export default function TimeWidgetModal() {
 
   Modal.setAppElement(document.getElementById("root"));
 
-  const customStyles = {
-    content: {
-      backgroundColor: "lime",
-    },
-  };
   return (
     <div>
-      <button onClick={openModal}>
+      <button id="TimeWidgetOpenButton" onClick={openModal}>
         <i className="bi-clock"></i>
       </button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        style={customStyles}
+        className="TimeWidgetModal"
+        overlayClassName="TimeWidgetModalOverlay"
         contentLabel="Time Widget"
       >
+        {/* Content Start*/}
         <i className="bi-clock"></i>
         <p className="centerText">
           {today}
           <br></br>
           <small>{time}</small>
         </p>
-        <button onClick={closeModal}>close</button>
+        <button id="TimeWidgetCloseButton" onClick={closeModal}>
+          X
+        </button>
+        {/* Content End*/}
       </Modal>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Draggable from "react-draggable";
 import Modal from "react-modal";
+import TodoL from "./TodoL";
 import "./TodoList.css";
 
 export default function TodoListModal() {
@@ -78,7 +79,7 @@ export default function TodoListModal() {
               </button>
             </span>
             <span id="listItemsContainer">
-              <listItems items={listItems}></listItems>
+              <TodoL todos={listItems}></TodoL>
             </span>
           </div>
         </Draggable>

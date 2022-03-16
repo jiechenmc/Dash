@@ -27,7 +27,7 @@ export default function TimeWidgetModal() {
   const today = date.toDateString();
   const time = parseTime();
 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
     setIsOpen(true);

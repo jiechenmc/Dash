@@ -1,9 +1,10 @@
 import React from "react";
+import TodoListModal from "./TodoListModal";
 
 export default function AssignmentWidget() {
   return (
     <div id="TodoListWidget" className="widgets">
-      <i className="bi-clipboard"></i>
+      <TodoListModal></TodoListModal>
     </div>
   );
 }

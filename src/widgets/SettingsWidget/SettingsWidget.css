@@ -1,0 +1,65 @@
+.SettingsWidgetModal {
+  /* keeps content together */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  /* moves the content to the center of the screen */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  padding: 20px;
+}
+
+.SettingsWidgetOverlay {
+  /*
+    No Overlay
+    */
+}
+#SettingsWidgetOpenButton {
+  background: none;
+  border: none;
+  display: block;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+#SettingsWidgetOpenButton:hover .bi-clock::before {
+  opacity: 1;
+  content: "\F291";
+}
+
+#SettingsWidgetCloseButton {
+  position: absolute;
+  border: none;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: red;
+}
+
+#SettingsWidgetContent {
+  border-top: 10px burlywood solid;
+  text-align: center;
+}
+
+.X {
+  background: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 30px;
+}

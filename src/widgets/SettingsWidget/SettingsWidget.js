@@ -1,9 +1,10 @@
 import React from "react";
+import SettingsModal from "./SettingsModal";
 
 export default function SettingWidget() {
   return (
     <div id="SettingsWidget" className="widgets">
-      <i className="bi-gear"></i>
+      <SettingsModal></SettingsModal>
     </div>
   );
 }

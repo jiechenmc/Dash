@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Draggable from "react-draggable";
 import Modal from "react-modal";
 import "./SettingsWidget.css";
 
 export default function SettingsModal() {
   const [modalIsOpen, setIsOpen] = useState(false);
-
   const openModal = () => {
     setIsOpen(true);
   };
@@ -15,6 +14,15 @@ export default function SettingsModal() {
   };
 
   Modal.setAppElement(document.getElementById("root"));
+
+  const [bgColor, setBgColor] = useState("#ffffff");
+
+  const handleColorChange = (e) => {
+    const newColor = e.target.value;
+    setBgColor(newColor);
+    document.querySelector("body").style.backgroundColor = newColor;
+  };
+
   return (
     <div>
       <button id="SettingsWidgetOpenButton" onClick={openModal}>
@@ -35,6 +43,16 @@ export default function SettingsModal() {
               <p className="X">X</p>
             </button>
             <i className="bi-gear"></i>
+            <p>
+              Site_Background_Color:
+              <input
+                id="bg-colorInput"
+                className="colorInput"
+                type="color"
+                value={bgColor}
+                onChange={handleColorChange}
+              ></input>
+            </p>
           </div>
         </Draggable>
 

@@ -34,9 +34,9 @@
   transition: 0.3s;
 }
 
-#SettingsWidgetOpenButton:hover .bi-clock::before {
+#SettingsWidgetOpenButton:hover .bi-gear::before {
   opacity: 1;
-  content: "\F291";
+  content: "\F3E2";
 }
 
 #SettingsWidgetCloseButton {
@@ -51,6 +51,9 @@
 #SettingsWidgetContent {
   border-top: 10px burlywood solid;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 .X {
@@ -62,4 +65,8 @@
 p {
   margin-top: 0;
   margin-bottom: 30px;
+}
+
+.colorInput {
+  margin-left: 10px;
 }

@@ -1,10 +1,12 @@
-import React from "react";
-import Spotify from "./Spotify";
+import React, { useState } from "react";
+import SpotifyInterface from "./SpotifyInterface";
 
 export default function Login() {
+  const [isLoggedIn, setIsLoggin] = useState(false);
+
   return (
     <div>
-      <Spotify />
+      <SpotifyInterface />
     </div>
   );
 }

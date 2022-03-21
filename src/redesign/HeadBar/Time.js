@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 export default function Time() {
   const parseTime = () => {
     const timeOfDay = date.getHours() - 12 < 0 ? "AM" : "PM";
-    const hours = timeOfDay === "PM" ? date.getHours() - 12 : date.getHours();
+    const hours =
+      timeOfDay === "PM" ? date.getHours() - 12 : "0" + date.getHours();
     const minutes =
       date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
     return `${hours}:${minutes} ${timeOfDay}`;

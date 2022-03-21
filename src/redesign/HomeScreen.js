@@ -6,10 +6,10 @@ import "./index.css";
 
 export default function HomeScreen() {
   return (
-    <>
+    <div className="grid grid-row-4">
       <HeadBar />
       <Content />
       <FootBar />
-    </>
+    </div>
   );
 }

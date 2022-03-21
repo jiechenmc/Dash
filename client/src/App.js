@@ -1,5 +1,5 @@
 import React from "react";
-import HomeScreen from "./redesign/HomeScreen";
+import HomeScreen from "./HomeScreen";
 
 function App() {
   return <HomeScreen />;

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 export default function SpotifyInterface() {
-  const [song, setSong] = useState("Fool");
-  const [player, setPlayer] = useState(undefined);
+  const [song, setSong] = useState("");
 
   const AUTH_TOKEN =
     "BQCyKrLBsUQgBWr41tFXkF15d0kv_83VE0trPXjwCWvkpLRbEK91pR0-18lrJbA1l17vToMNrowr6dOkw84t2lNdwV1bZy1adX8Q10uTDOYfWpJPSYJ6VzTuFetixOcGcVrXx62onm0YkDMJtKWxKsWSpxnI7JMNOWpkPe6Txqt5wVSwUHvy-Ts";
@@ -33,47 +32,12 @@ export default function SpotifyInterface() {
   };
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://sdk.scdn.co/spotify-player.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      const player = new window.Spotify.Player({
-        name: "Web Playback SDK",
-        getOAuthToken: (cb) => {
-          cb(AUTH_TOKEN);
-        },
-        volume: 0.5,
-      });
-
-      setPlayer(player);
-
-      player.addListener("ready", ({ device_id }) => {
-        console.log("Ready with Device ID", device_id);
-      });
-
-      player.addListener("not_ready", ({ device_id }) => {
-        console.log("Device ID has gone offline", device_id);
-      });
-
-      document.getElementById("PlayButton").onclick = function () {
-        player.togglePlay();
-      };
-
-      player.addListener("player_state_changed", (state) => {
-        if (!state) {
-          return;
-        }
-        console.log(state.track_window.current_track);
-      });
-      player.connect();
-    };
-  }, []);
-
-  useEffect(() => {
     processSong("3wefloF3t1sFZx8YMFhqYB");
+    fetch("/api/customers").then((res) => {
+      res.json().then((data) => {
+        console.log(data);
+      });
+    });
   }, []);
 
   const { cover, artist, name } = song;

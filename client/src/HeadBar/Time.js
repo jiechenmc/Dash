@@ -4,7 +4,7 @@ export default function Time() {
   const parseTime = () => {
     const timeOfDay = date.getHours() - 12 < 0 ? "AM" : "PM";
     const hours =
-      timeOfDay === "PM" ? date.getHours() - 12 : "0" + date.getHours();
+      date.getHours() - 10 < 0 ? "0" + date.getHours() : date.getHours();
     const minutes =
       date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
     return `${hours}:${minutes} ${timeOfDay}`;

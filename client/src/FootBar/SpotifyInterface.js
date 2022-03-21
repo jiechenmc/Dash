@@ -20,6 +20,8 @@ export default function SpotifyInterface({ code }) {
             sliderColor: "#1cb954",
             trackArtistColor: "#ccc",
             trackNameColor: "#fff",
+            sliderHeight: "1rem",
+            height: "4rem",
           }}
         />
       ) : (

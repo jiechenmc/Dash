@@ -5,8 +5,10 @@ const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=${client_id}&
 
 export default function Login() {
   return (
-    <div className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full">
-      <a href={AUTH_URL}>Login with Spotify</a>
+    <div className="flex justify-center items-center">
+      <div className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full">
+        <a href={AUTH_URL}>Login with Spotify</a>
+      </div>
     </div>
   );
 }

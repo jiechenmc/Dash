@@ -1,4 +1,17 @@
-# Dashboard with spotify control
-<br>
+# Dash
 
-# More features are coming and will be deployed on AWS instead of Github pages
+## Requirements To Run Locally
+
+- Have node && npm
+
+### Terminal
+
+```bash
+cd client/
+npm i
+cd ../server/
+npm i
+npm run dev
+```
+
+Visit [localhost:3000/](https://localhost:3000/)

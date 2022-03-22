@@ -1,29 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useTime from "./useTime";
 
 export default function Time() {
-  const parseTime = () => {
-    const timeOfDay = date.getHours() - 12 < 0 ? "AM" : "PM";
-    let hours =
-      date.getHours() - 10 < 0 ? "0" + date.getHours() : date.getHours() - 12;
-    if (hours === "00") hours = 12;
-    const minutes =
-      date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-    return `${hours}:${minutes} ${timeOfDay}`;
-  };
-
-  const [date, setDate] = useState(new Date());
-
-  // This useEffect hook only runs once when the component mounts
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDate(new Date());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const today = date.toDateString();
-  const time = parseTime();
-
+  const [today, time] = useTime();
   return (
     <div className="flex flex-row gap-1">
       {/* Compact View */}

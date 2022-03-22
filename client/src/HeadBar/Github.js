@@ -6,7 +6,11 @@ export default function Github() {
   };
   return (
     <div className="flex">
-      <button onClick={handleOnClick} className="w-full bg-neutral-800">
+      <button
+        onClick={handleOnClick}
+        className="w-full bg-neutral-800"
+        title="View Source!"
+      >
         <i className="bi-github text-xl"></i>
       </button>
     </div>

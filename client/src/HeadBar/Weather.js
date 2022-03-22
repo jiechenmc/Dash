@@ -1,25 +1,24 @@
 import React from "react";
+import WeatherComfort from "./WeatherViews/WeatherComfort";
+import WeatherCompact from "./WeatherViews/WeatherCompact";
 
-export default function Weather() {
+export default function Weather({ isCompact }) {
   const city = "Stony Brook";
   const weather = "Sunny";
   const temperature = "53.6°F|12°C";
 
+  const props_list = {
+    city,
+    weather,
+    temperature,
+  };
   return (
-    <div className="flex flex-row gap-1">
-      {/* Compact View */}
-      {/* <i className="bi-cloud text-xl"></i>
-      <p className="text-xl">Stony Brook</p>
-      <p className="text-sm">Sunny</p>
-      <p className="text-sm">53.6°F|12°C</p> */}
-
-      {/* Comfort View */}
-      <i className="bi-cloud text-xl"></i>
-      <span id="WeatherCard">
-        <p className="text-xl">{city}</p>
-        <p className="text-sm">{weather}</p>
-        <p className="text-sm">{temperature}</p>
-      </span>
+    <div>
+      {isCompact ? (
+        <WeatherCompact {...props_list} />
+      ) : (
+        <WeatherComfort {...props_list} />
+      )}
     </div>
   );
 }

@@ -1,22 +1,23 @@
 import React from "react";
 import useTime from "./useTime";
+import TimeCompact from "./TimeViews/TimeCompact";
+import TimeComfort from "./TimeViews/TimeComfort";
 
-export default function Time() {
+export default function Time({ isCompact }) {
   const [today, time] = useTime();
+
+  const props_list = {
+    time,
+    today,
+  };
+
   return (
-    <div className="flex flex-row gap-1">
-      {/* Compact View */}
-
-      {/* <i className="bi-clock text-xl"></i>
-      <p className="text-xl">{today}</p>
-      <p className="text-sm">{time}</p> */}
-
-      {/* Comfort View */}
-      <i className="bi-clock text-xl"></i>
-      <span id="TimeCard">
-        <p className="text-xl">{today}</p>
-        <p className="text-sm">{time}</p>
-      </span>
+    <div className="">
+      {isCompact ? (
+        <TimeCompact {...props_list} />
+      ) : (
+        <TimeComfort {...props_list} />
+      )}
     </div>
   );
 }

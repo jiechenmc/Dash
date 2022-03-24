@@ -4,12 +4,10 @@
 
 - Have 2 .env files
 ### one in client/
-<br />
 `REACT_APP_client_id={}`
 ### one in server/
 `client_id={}`
 `client_secret={}`
-<br />
 
 - Have node && npm
 

@@ -6,7 +6,7 @@
 ### one in client/
 `REACT_APP_client_id={}`
 ### one in server/
-`client_id={}`
+`client_id={}` <br />
 `client_secret={}`
 
 - Have node && npm

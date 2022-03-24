@@ -1,4 +1,4 @@
-# Dash
+# Dash (In progress!)
 
 ## Requirements To Run Locally
 
@@ -16,4 +16,3 @@ npm run dev
 
 Visit [localhost:3000/](https://localhost:3000/)
 
-# Currently finishing up new functionalities and will deploy to AWS

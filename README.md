@@ -3,10 +3,10 @@
 ## Requirements To Run Locally
 
 - Have 2 .env files
--- one in client/
+### one in client/
 <br />
 `REACT_APP_client_id={}`
--- one in server/
+### one in server/
 `client_id={}`
 `client_secret={}`
 <br />

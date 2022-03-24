@@ -4,7 +4,7 @@
 
 - Have 2 .env files
 ### one in client/
-```REACT_APP_client_id=your_client_id```
+`REACT_APP_client_id=your_client_id`
 ### one in server/
 `client_id=your_client_id` <br />
 `client_secret=your_client_secret`

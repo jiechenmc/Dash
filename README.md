@@ -1,4 +1,4 @@
-# Dash (In progress!)
+# Dash (In the works!)
 
 ## Requirements To Run Locally
 

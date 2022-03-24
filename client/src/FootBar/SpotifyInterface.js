@@ -8,6 +8,7 @@ export default function SpotifyInterface({ code }) {
     <div>
       {access_token ? (
         <SpotifyPlayer
+          uris={["spotify:playlist:37i9dQZF1DX6KwoIt0pZYP"]}
           token={access_token}
           persistDeviceSelection
           showSaveIcon

@@ -1,9 +1,8 @@
 import React from "react";
 import useTime from "./useTime";
-import TimeCompact from "./TimeViews/TimeCompact";
-import TimeComfort from "./TimeViews/TimeComfort";
+import TimeCard from "./TimeCard";
 
-export default function Time({ isCompact }) {
+export default function Time() {
   const [today, time] = useTime();
 
   const props_list = {
@@ -12,12 +11,8 @@ export default function Time({ isCompact }) {
   };
 
   return (
-    <div className="">
-      {isCompact ? (
-        <TimeCompact {...props_list} />
-      ) : (
-        <TimeComfort {...props_list} />
-      )}
+    <div className="w-fit">
+      <TimeCard {...props_list} />
     </div>
   );
 }

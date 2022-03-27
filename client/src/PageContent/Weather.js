@@ -19,7 +19,7 @@ export default function Weather() {
   };
 
   return (
-    <div className="mt-2">
+    <div className="">
       <label class="block text-gray-700 text-sm font-bold" for="city">
         City
       </label>

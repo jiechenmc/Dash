@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
-import WeatherComfort from "./WeatherViews/WeatherComfort";
-import WeatherCompact from "./WeatherViews/WeatherCompact";
+import WeatherCard from "./WeatherCard";
 
-export default function Weather({ isCompact }) {
+export default function Weather() {
   const [city, setCity] = useState("Stony Brook");
   const [weather, setWeather] = useState("Sunny");
   const [temperature, setTemperature] = useState("53.6°F|12°C");
@@ -25,11 +24,7 @@ export default function Weather({ isCompact }) {
       <button onClick={onButtonClick} className="bg-neutral-500">
         Search this city
       </button>
-      {isCompact ? (
-        <WeatherCompact {...props_list} />
-      ) : (
-        <WeatherComfort {...props_list} />
-      )}
+      <WeatherCard {...props_list} />
     </div>
   );
 }

@@ -5,7 +5,7 @@ export default function Github() {
     window.open("https://github.com/jiechenmc/dash", "_blank");
   };
   return (
-    <div className="flex">
+    <div>
       <button
         onClick={handleOnClick}
         className="w-full bg-neutral-800"

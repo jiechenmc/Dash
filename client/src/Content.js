@@ -1,5 +1,10 @@
 import React from "react";
+import Weather from "./PageContent/Weather";
 
 export default function Content() {
-  return <div>Content</div>;
+  return (
+    <div>
+      <Weather />
+    </div>
+  );
 }

@@ -7,7 +7,11 @@ export default function Weather({ isCompact }) {
   const [weather, setWeather] = useState("Sunny");
   const [temperature, setTemperature] = useState("53.6°F|12°C");
   const inputElement = useRef(null);
-  const userInput = inputElement.current.value;
+
+  const onButtonClick = () => {
+    const userInput = inputElement.current.value;
+    console.log(userInput);
+  };
 
   const props_list = {
     city,
@@ -17,7 +21,10 @@ export default function Weather({ isCompact }) {
 
   return (
     <div>
-      <input ref={inputElement} className="bg-gray-600"></input>
+      <input ref={inputElement} className="bg-neutral-600"></input>
+      <button onClick={onButtonClick} className="bg-neutral-500">
+        Search this city
+      </button>
       {isCompact ? (
         <WeatherCompact {...props_list} />
       ) : (

@@ -5,12 +5,8 @@ export default function Github() {
     window.open("https://github.com/jiechenmc/dash", "_blank");
   };
   return (
-    <div>
-      <button
-        onClick={handleOnClick}
-        className="w-full bg-neutral-800"
-        title="View Source!"
-      >
+    <div className="right-0 bg-neutral-800 text-center">
+      <button onClick={handleOnClick} title="View Source!">
         <i className="bi-github text-xl"></i>
       </button>
     </div>

@@ -11,7 +11,7 @@ export default function Time() {
   };
 
   return (
-    <div className="w-fit">
+    <div className="w-full">
       <TimeCard {...props_list} />
     </div>
   );

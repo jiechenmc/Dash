@@ -5,11 +5,14 @@ export default function useTime() {
 
   const parseTime = () => {
     const timeOfDay = date.getHours() - 12 < 0 ? "AM" : "PM";
-    let hours =
-      date.getHours() - 10 < 0 ? "0" + date.getHours() : date.getHours() - 12;
-    if (hours === "00") hours = 12;
+    let hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
     const minutes =
       date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+
+    if (timeOfDay === "PM") hours = hours - 12;
+
+    if (hours === 0) hours = 12;
+
     return `${hours}:${minutes} ${timeOfDay}`;
   };
 

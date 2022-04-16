@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WeatherCompact({ city, weather, temperature }) {
+export default function WeatherCard({ city, weather, temperature }) {
   return (
     <div className="flex flex-row gap-1 ">
       <i className="bi-cloud text-xl"></i>

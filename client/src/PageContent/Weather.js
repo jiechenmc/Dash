@@ -19,20 +19,20 @@ export default function Weather() {
   };
 
   return (
-    <div className="">
-      <label class="block text-gray-700 text-sm font-bold" for="city">
+    <div className="text-center">
+      <label class="block text-gray-700 text-lg font-bold" for="city">
         City
       </label>
       <input
         ref={inputElement}
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2"
+        className="shadow appearance-none border rounded w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2 mr-2"
         id="city"
         type="text"
         placeholder="City"
       />
       <button
         onClick={onButtonClick}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-mono"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-mono "
         type="button"
       >
         Search

@@ -11,7 +11,7 @@ export default function Time() {
   };
 
   return (
-    <div className="w-full">
+    <div className="aboslute w-full ">
       <TimeCard {...props_list} />
     </div>
   );

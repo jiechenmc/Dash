@@ -6,7 +6,7 @@ export default function HeadBar() {
   return (
     <div className="inline-flex gap-2 bg-neutral-700 text-white text-mono">
       {/* Temporary message*/}
-      <p className="absolute left-0 ">Currently in the works!</p>
+      <p className="absolute left-0 ">Spotify feature works locally</p>
       <Time />
       <Github />
     </div>

@@ -1,15 +1,26 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import WeatherCard from "./WeatherCard";
+import useWeatherData from "./useFetch";
 
 export default function Weather() {
   const [city, setCity] = useState("Stony Brook");
   const [weather, setWeather] = useState("Sunny");
-  const [temperature, setTemperature] = useState("53.6°F|12°C");
+  const [temperature, setTemperature] = useState("53.6");
   const inputElement = useRef(null);
+  const wdata = useWeatherData(city);
+
+  useEffect(() => {
+    // checking if it's undefined fixes the crash
+    if (wdata !== undefined) {
+      console.log(wdata);
+      setTemperature(wdata.main.temp);
+      setWeather(wdata.weather[0].main);
+    }
+  }, [city]);
 
   const onButtonClick = () => {
     const userInput = inputElement.current.value;
-    console.log(userInput);
+    setCity(userInput);
   };
 
   const props_list = {

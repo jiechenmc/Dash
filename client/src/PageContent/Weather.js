@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import WeatherCard from "./WeatherCard";
-import useWeatherData from "./useFetch";
+import useWeatherData from "./useWeatherData";
 import FootBar from "../FootBar";
 
 export default function Weather() {

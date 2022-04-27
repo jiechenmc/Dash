@@ -2,10 +2,8 @@ import React, { useState } from "react";
 
 export default function Settings() {
   const [moods, setMoods] = useState({
-    Sunny: "Happy",
-    Snow: "Tired",
-    Rain: "Sad",
-    Thunderstorm: "Angry",
+    Clear: "Happy",
+    EverythingElse: "Sad",
   });
 
   const moodList = Object.keys(moods).map((mood) => {

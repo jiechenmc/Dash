@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import WeatherCard from "./WeatherCard";
 import useWeatherData from "./useFetch";
+import FootBar from "../FootBar";
 
 export default function Weather() {
   const [city, setCity] = useState("Stony Brook");
@@ -49,6 +50,7 @@ export default function Weather() {
         Search
       </button>
       <WeatherCard {...props_list} />
+      <FootBar weather={weather} />
     </div>
   );
 }

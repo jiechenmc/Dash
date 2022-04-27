@@ -1,14 +1,21 @@
 import useAuth from "./useAuth";
 import SpotifyPlayer from "react-spotify-web-playback";
 
-export default function SpotifyInterface({ code }) {
+export default function SpotifyInterface({ code, weather }) {
+  // pseudo suggestion
   const access_token = useAuth(code);
+  const happy = "spotify:playlist:37i9dQZF1DXdPec7aLTmlC";
+  const sad = "spotify:playlist:37i9dQZF1DWSqBruwoIXkA";
+
+  let uri = sad;
+
+  if (weather === "Clear") uri = happy;
 
   return (
     <div>
       {access_token ? (
         <SpotifyPlayer
-          uris={["spotify:playlist:37i9dQZF1DX6KwoIt0pZYP"]}
+          uris={[uri]}
           token={access_token}
           persistDeviceSelection
           showSaveIcon

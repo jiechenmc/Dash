@@ -17,7 +17,7 @@ export default function Weather() {
       setTemperature(wdata.main.temp);
       setWeather(wdata.weather[0].main);
     }
-  }, [city]);
+  }, [wdata]);
 
   const onButtonClick = () => {
     const userInput = inputElement.current.value;

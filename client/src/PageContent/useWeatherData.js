@@ -13,7 +13,7 @@ const useWeatherData = (city) => {
       });
     };
     fetchData();
-  }, []);
+  }, [query]);
   return data;
 };
 
